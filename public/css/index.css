@@ -29,7 +29,7 @@ html {
 }
 @media only screen and (min-width: 1650px){
     html {
-        font-size: 20px !important;
+        font-size: 17px !important;
     }
 }
 /*@media only screen and (min-width: 481px){*/
@@ -51,7 +51,6 @@ html {
 .header{
     width: 100%;
     height: 3.3rem;
-    border: blue solid 1px;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -61,24 +60,43 @@ html {
 /*脚*/
 .footer{
     width: 100%;
-    height: 4.1rem;
+    height: 4rem;
     position: fixed;
     bottom: 0;
-    background-color: #2B2B2B;
-    border: green solid 1px;
+    background-color: #050505;
     z-index: 11;
-    cursor: pointer;
-}
-.footer-list{
-    width: 80%;
-    height: 10rem;
-    margin: 0 auto;
-    border: white solid 1px;
 }
 .footer:hover{
-     height: 10rem;
-     transition:height 2s;
+    height: 10rem;
+    transition:height 2s;
 }
+.footer-list{
+    width: 60%;
+    height: 10rem;
+    margin: 0 auto;
+    /*里面的ul弹性布局*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*里面字体颜色*/
+    color: white;
+}
+.footer-list ul{
+    /*width: 5rem;*/
+    flex: 1;
+    height: 100%;
+}
+.footer-list ul h3{
+    font: normal 1.2rem "SimSun-ExtB";
+    height: 4rem;
+    line-height: 4rem;
+}
+.footer-list ul li{
+    height: 1.8rem;
+    font: normal 1rem "SimSun-ExtB";
+    cursor: pointer;
+}
+
 /*侧边导航*/
 .sidebar {
     width: 15rem;
@@ -86,7 +104,7 @@ html {
     top: 0;
     position: fixed;
     left: 0;
-    border: red solid 1px;
+    /*border: red solid 1px;*/
     z-index: 2;
     background: linear-gradient(to bottom,#F3F3F3,white);
 }
@@ -99,7 +117,6 @@ html {
     height: 3.3rem;
     line-height: 3.3rem;
     border-bottom: black solid 1px;
-    cursor: pointer;
     /*给小标识定位*/
     position: relative;
 }
@@ -123,28 +140,29 @@ html {
     transform: rotate(90deg);
     width: 0.8rem;
 }
+.sidebar-row a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
 
-/*主页*/
+/*主页,,大盒子的高度与每个小页面相匹配*/
 .main-wrapper{
     width: 100%;
-    height: 152vw;
     margin-top: 3.3rem;
     padding-left: 15rem;
     padding-bottom: 4.1rem;
     box-sizing: border-box;
-    border: yellow solid 1px;
+    z-index: 111;
 }
-.wrapper-login{
+iframe{
     width: 100%;
     height: 100%;
-    border: black solid 1px;
-    /*弹性盒子*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
-.wrapper-shop{
-    flex: 1;
-    width: 100%;
-    border-bottom: green solid 1px;
+/*每一个小页面对应一个高,通过js在点击每个盒子的时候，跳转对应的class的高*/
+.main-wrapper-playboy{
+     height: 150vw;
+ }
+.main-wrapper-login{
+    height: 10vw;
 }

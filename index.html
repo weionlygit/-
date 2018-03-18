@@ -5,8 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./public/css/text.css">
+    <title>PlayBoy--毕设</title>
+    <link rel="shortcut icon" href="./public/images/playboy.ico">
+    <link rel="stylesheet" href="public/css/index.css">
+    <link rel="stylesheet" href="public/css/playboy.css">
+    <!--有一个main-wrapper的设置，第一次打开页面显示的时候要用到样式-->
+    <script type="text/javascript" src="./public/js/main.js"></script>
 </head>
 <body>
 <div class="global-container">
@@ -18,44 +22,70 @@
 
     <div class="sidebar">
         <div class="sidebar-big">
-            <div class="sidebar-row top"><h1>花花公子</h1></div>
-            <div class="sidebar-row"><h3>登录</h3>
-                <div class="sidebar-row-right"></div>
+            <div class="sidebar-row top"><a href=""><h1>PLAYBOY</h1></a></div>
+            <div class="sidebar-row login"><a href="views(跳转的小页面)/login.html" target="to-page"><h3>登录</h3>
+                <div class="sidebar-row-right"></div></a>
             </div>
-            <div class="sidebar-row"><h3>注册</h3>
-                <div class="sidebar-row-right"></div>
+            <div class="sidebar-row"><a href="views(跳转的小页面)/register.html" target="to-page"><h3>注册</h3>
+                <div class="sidebar-row-right"></div></a>
             </div>
-            <div class="sidebar-row"><h3>个人主页</h3>
-                <div class="sidebar-row-right"></div>
+            <div class="sidebar-row"><a href="views(跳转的小页面)/persion.html" target="to-page"><h3>个人主页</h3>
+                <div class="sidebar-row-right"></div></a>
             </div>
-            <div class="sidebar-row"><h3>购物车</h3>
-                <div class="sidebar-row-right"></div>
+            <div class="sidebar-row"><a href="views(跳转的小页面)/cart.html" target="to-page"><h3>购物车</h3>
+                <div class="sidebar-row-right"></div></a>
             </div>
-            <div class="sidebar-row"><h3>关于我们</h3>
-                <div class="sidebar-row-right"></div>
+            <div class="sidebar-row"><a href="views(跳转的小页面)/aboutus.html" target="to-page"><h3>关于我们</h3>
+                <div class="sidebar-row-right"></div></a>
             </div>
             <div class="sidebar-row small"style="border-bottom: none"><span style="font-size: 0.5rem">太原科技大学</span></div>
         </div>
     </div>
-    <div class="main-wrapper">
-        <!--五个大盒子分别为登录注册等窗口，一个显示的时候其他为隐藏-->
-        <div class="wrapper-login">
-            <div class="wrapper-shop"></div>
-            <div class="wrapper-shop"></div>
-            <div class="wrapper-shop"></div>
-            <div class="wrapper-shop"></div>
-        </div>
-        <div class="wrapper-register"></div>
-        <div class="wrapper-person"></div>
-        <div class="wrapper-cart"></div>
-        <div class="wrapper-about"></div>
+
+    <div class="main-wrapper main-wrapper-playboy">
+        <!--六个大盒子分别为playboy、登录、注册等窗口，在iframe中跳转-->
+        <iframe src="./views(跳转的小页面)/playboy.html" frameborder="0" scrolling="no" name="to-page"></iframe>
+
     </div>
 
     <footer>
         <div class="footer">
-            <div class="footer-list"></div>
+            <div class="footer-list">
+                <ul>
+                    <h3>花花公子</h3>
+                    <li>Music</li>
+                    <li>News</li>
+                    <li>Magazine</li>
+                </ul>
+                <ul>
+                    <h3>顾客关心</h3>
+                    <li>Size Guide</li>
+                </ul>
+                <ul>
+                    <h3>咨询服务</h3>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul>
+                    <h3>FOLLOW US ON</h3>
+                    <li>新浪微博</li>
+                    <li>微信</li>
+                    <li>QQ</li>
+                </ul>
+            </div>
         </div>
     </footer>
 </div>
+
+
+<script type="text/javascript">
+    var a=document.getElementsByClassName("main-wrapper-playboy");
+
+    var b=document.getElementsByClassName("login");
+    b.onclick=function(){
+        a.className="main-wrapper-login";
+    }
+</script>
 </body>
 </html>
