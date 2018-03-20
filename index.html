@@ -23,29 +23,36 @@
     <div class="sidebar">
         <div class="sidebar-big">
             <div class="sidebar-row top"><a href=""><h1>PLAYBOY</h1></a></div>
-            <div class="sidebar-row login"><a href="views(跳转的小页面)/login.html" target="to-page"><h3>登录</h3>
+            <div class="sidebar-row login"><a href="views(跳转的小页面)/login.html"><h3>登录</h3>
                 <div class="sidebar-row-right"></div></a>
             </div>
-            <div class="sidebar-row"><a href="views(跳转的小页面)/register.html" target="to-page"><h3>注册</h3>
+            <div class="sidebar-row"><a href="views(跳转的小页面)/register.html"><h3>注册</h3>
                 <div class="sidebar-row-right"></div></a>
             </div>
-            <div class="sidebar-row"><a href="views(跳转的小页面)/persion.html" target="to-page"><h3>个人主页</h3>
+            <div class="sidebar-row"><a href="views(跳转的小页面)/person.html"><h3>个人主页</h3>
                 <div class="sidebar-row-right"></div></a>
             </div>
-            <div class="sidebar-row"><a href="views(跳转的小页面)/cart.html" target="to-page"><h3>购物车</h3>
+            <div class="sidebar-row"><a href="views(跳转的小页面)/cart.html"><h3>购物车</h3>
                 <div class="sidebar-row-right"></div></a>
             </div>
-            <div class="sidebar-row"><a href="views(跳转的小页面)/aboutus.html" target="to-page"><h3>关于我们</h3>
+            <div class="sidebar-row"><a href="views(跳转的小页面)/aboutus.html"><h3>关于我们</h3>
                 <div class="sidebar-row-right"></div></a>
             </div>
-            <div class="sidebar-row small"style="border-bottom: none"><span style="font-size: 0.5rem">太原科技大学</span></div>
+            <div class="sidebar-row small" style="border-bottom: none"><span style="font-size: 0.5rem">太原科技大学</span></div>
         </div>
     </div>
 
-    <div class="main-wrapper main-wrapper-playboy">
-        <!--六个大盒子分别为playboy、登录、注册等窗口，在iframe中跳转-->
-        <iframe src="./views(跳转的小页面)/playboy.html" frameborder="0" scrolling="no" name="to-page"></iframe>
-
+    <div class="main-wrapper">
+        <!--六个大盒子分别为playboy、登录、注册等窗口，在iframe中跳转
+          不能用iframe,交互不好，用路由-->
+        <div class="playboy">
+            <div class="playboy-shop">
+                <img src="./public/images/top2.jpg" alt="">
+            </div>
+            <div class="playboy-shop"></div>
+            <div class="playboy-shop"></div>
+            <div class="playboy-shop"></div>
+        </div>
     </div>
 
     <footer>
@@ -68,7 +75,7 @@
                     <li></li>
                 </ul>
                 <ul>
-                    <h3>FOLLOW US ON</h3>
+                    <h3>FOLLOW US</h3>
                     <li>新浪微博</li>
                     <li>微信</li>
                     <li>QQ</li>
@@ -77,15 +84,5 @@
         </div>
     </footer>
 </div>
-
-
-<script type="text/javascript">
-    var a=document.getElementsByClassName("main-wrapper-playboy");
-
-    var b=document.getElementsByClassName("login");
-    b.onclick=function(){
-        a.className="main-wrapper-login";
-    }
-</script>
 </body>
 </html>

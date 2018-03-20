@@ -22,14 +22,19 @@ a.on{ font-weight: bold;}
 html {
     font-size : 16px;
 }
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 768px){
     html {
-        font-size: 8px !important;
+        font-size: 8px;
     }
+    /*.sidebar{display: none;}*/
+    /*.main-wrapper{*/
+        /*padding-left:0;*/
+    /*}*/
 }
-@media only screen and (min-width: 1650px){
+@media only screen and (min-width: 1650px) {
+
     html {
-        font-size: 17px !important;
+        font-size: 17px;
     }
 }
 /*@media only screen and (min-width: 481px){*/
@@ -60,6 +65,7 @@ html {
 /*脚*/
 .footer{
     width: 100%;
+    min-width: 375px;
     height: 4rem;
     position: fixed;
     bottom: 0;
@@ -149,20 +155,31 @@ html {
 /*主页,,大盒子的高度与每个小页面相匹配*/
 .main-wrapper{
     width: 100%;
+    height: 150vw;
+
     margin-top: 3.3rem;
     padding-left: 15rem;
     padding-bottom: 4.1rem;
     box-sizing: border-box;
     z-index: 111;
+
 }
-iframe{
+.playboy{
+    width: 100%;
+    height: 100%;
+    /*border: black solid 1px;*/
+    /*弹性盒子*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.playboy-shop{
+    flex: 1;
+    width: 100%;
+    border-bottom: green solid 1px;
+}
+.playboy-shop img{
     width: 100%;
     height: 100%;
 }
-/*每一个小页面对应一个高,通过js在点击每个盒子的时候，跳转对应的class的高*/
-.main-wrapper-playboy{
-     height: 150vw;
- }
-.main-wrapper-login{
-    height: 10vw;
-}
+/*错的：每一个小页面对应一个高,通过js在点击每个盒子的时候，跳转对应的class的高*/
